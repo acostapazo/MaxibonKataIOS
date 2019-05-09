@@ -15,18 +15,8 @@ public struct Developer {
 
     init(name: String, numberOfMaxibonsToGet: Int) {
         self.name = name
-        self.numberOfMaxibonsToGet = numberOfMaxibonsToGet < 0 ? 0 : numberOfMaxibonsToGet
+        self.numberOfMaxibonsToGet = numberOfMaxibonsToGet
     }
 
 }
 
-open class Karumies {
-
-    public static let Pedro = Developer(name: "Pedro", numberOfMaxibonsToGet: 3)
-    public static let Davide = Developer(name: "Davide", numberOfMaxibonsToGet: 0)
-    public static let Toni = Developer(name: "Toni", numberOfMaxibonsToGet: 1)
-    public static let Jorge = Developer(name: "Jorge", numberOfMaxibonsToGet: 2)
-    public static let Sergio = Developer(name: "Sergio", numberOfMaxibonsToGet: 1)
-    public static let Fran = Developer(name: "Fran", numberOfMaxibonsToGet: 1)
-
-}
