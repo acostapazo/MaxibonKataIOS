@@ -15,7 +15,18 @@ public struct Developer {
 
     init(name: String, numberOfMaxibonsToGet: Int) {
         self.name = name
-        self.numberOfMaxibonsToGet = numberOfMaxibonsToGet
+        if numberOfMaxibonsToGet >= 0{
+            self.numberOfMaxibonsToGet = numberOfMaxibonsToGet
+        }
+        else{
+            self.numberOfMaxibonsToGet = 0
+        }
+    }
+    
+    func isValidDeveloper() -> Bool{
+        let regEx = "\\w{7,18}"
+        let test = NSPredicate(format:"SELF MATCHES %@", regEx)
+        return test.evaluate(with:name)
     }
 
 }
